@@ -17,11 +17,16 @@ import numpy as np
 from openai.embeddings_utils import distances_from_embeddings, cosine_similarity
 from ast import literal_eval
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
+
+
+openai.api_key = os.environ['OPENAI_KEY']
+
 # Regex pattern to match a URL
 HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
-
-# Define OpenAI api_key
-openai.api_key = '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'
 
 # Define root domain to crawl
 # domain = "openai.com"

@@ -17,17 +17,22 @@ import numpy as np
 from openai.embeddings_utils import distances_from_embeddings, cosine_similarity
 from ast import literal_eval
 
-# Regex pattern to match a URL
-HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
+from dotenv import load_dotenv
+load_dotenv()
 
-# Define OpenAI api_key
-openai.api_key = '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'
+
+
+
+openai.api_key = os.environ['OPENAI_KEY']
 
 # Define root domain to crawl
 # domain = "openai.com"
 # full_url = "https://openai.com/"
 domain = "fazer.tech"
 full_url = "https://fazer.tech/"
+
+# Regex pattern to match a URL
+HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 
 # Create a class to parse the HTML and get the hyperlinks
 # class HyperlinkParser(HTMLParser):
