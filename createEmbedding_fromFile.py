@@ -25,6 +25,7 @@ load_dotenv()
 
 openai.api_key = os.environ['OPENAI_KEY']
 
+
 # Define root domain to crawl
 # domain = "openai.com"
 # full_url = "https://openai.com/"
@@ -195,10 +196,10 @@ def remove_newlines(serie):
 texts=[]
 
 # Get all the text files in the text directory
-for file in os.listdir("text/" + domain + "/"):
+for file in os.listdir("copy-paste-files/"):
 
     # Open the file and read the text
-    with open("text/" + domain + "/" + file, "r", encoding="UTF-8") as f:
+    with open("copy-paste-files/" + file, "r", encoding="UTF-8") as f:
         text = f.read()
 
         # Omit the first 11 lines and the last 4 lines, then replace -, _, and #update with spaces.
@@ -406,4 +407,4 @@ def answer_question(
 
 print(answer_question(df, question="What day is it?", debug=False))
 
-print(answer_question(df, question="What is fazer.tech's email?"))
+# print(answer_question(df, question="What is fazer.tech's email?"))

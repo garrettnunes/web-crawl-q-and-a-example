@@ -29,11 +29,13 @@ HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 
 
 # Define root domain to crawl
+domain = "865data.com"
+full_url = "https://865data.com/"
 # domain = "openai.com"
 # full_url = "https://openai.com/"
-domain = "library.municode.com"
-# full_url = "https://library.municode.com/tn/knoxville/codes/code_of_ordinances"
-full_url = "https://library.municode.com/tn/knoxville/ordinances/code_of_ordinances?nodeId=1283759"
+# domain = "library.municode.com"
+# # full_url = "https://library.municode.com/tn/knoxville/codes/code_of_ordinances"
+# full_url = "https://library.municode.com/tn/knoxville/ordinances/code_of_ordinances?nodeId=1283759"
 
 # Create a class to parse the HTML and get the hyperlinks
 class HyperlinkParser(HTMLParser):
